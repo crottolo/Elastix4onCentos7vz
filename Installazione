@@ -1,0 +1,30 @@
+Elastix is an unified communications server software that brings together IP PBX, email, IM, faxing and collaboration functionality. It has a Web interface and includes capabilities such as a call center software with predictive dialing.
+
+The Elastix functionality is based on open source projects including Asterisk, FreePBX, HylaFAX, Openfire and Postfix. Those packages offer the PBX, fax, instant messaging and email functions, respectively.
+
+Elastix is free software, released under the GNU General Public License.
+
+The tutorial was prepared with our "CentOS 7" template and is meant to work on our self-managed virtual private servers.
+
+0. Preliminary requirements:
+"CentOS 7 64-bit" template installed on server.
+
+1. Downloading install scripts:
+wget -O Elastix4onCentos7vz.tar.gz --no-check-certificate https://github.com/thpryrchn/Elastix4onCentos7vz/tarball/master
+
+tar zxvf Elastix4onCentos7vz.tar.gz --strip-components=1
+
+2. Installation process
+The first script you have to launch is:
+
+./elastix-install-p1.sh
+
+After installation process you have to reboot your server. Now you can launch the second installation script:
+
+./elastix-install-p2.sh
+
+In this step you will be asked to setup MySQL password and your Elastic admin user password. And after this setup you have to reboot your server once again.
+
+And that's it. Now you can login to your Elastic web interface with password you have entered and manage your Elastix instance:
+
+http://yourhostname
